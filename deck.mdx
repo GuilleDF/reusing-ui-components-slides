@@ -1,0 +1,91 @@
+import myTheme from './theme';
+export const theme = myTheme;
+
+# Reusing UI components
+
+Guillermo De Fermin
+
+---
+
+## Why resuable UI components?
+
+- Reusing is good! ♻️
+- Consistency across different applications
+- Decouples component development from app development
+
+---
+
+import pic from './images/inconsistent-design.jpg';
+
+<img src={pic} />
+
+---
+
+import pic2 from './images/inconsistent-design-2.jpg';
+
+<img src={pic2} />
+
+---
+
+## Isolated component development
+
+- Components are created and reviewed out of context, making it easier to keep them generic
+- Components are tested independently of applications
+- Most components are already available when developing a new feature
+
+---
+
+import storybook from './images/storybook.png';
+
+<a
+  href='https://ui.taxfix.de/?path=/story/stories-8-lab-section-table--complete-example'
+  target='_blank'
+>
+  <img
+    src={storybook}
+    style={{
+      position: 'absolute',
+      width: '90vw',
+      height: '90vh',
+      top: '5%',
+      left: '5%',
+    }}
+  />
+</a>
+
+---
+
+## Our implementation: [@taxfix/ui](https://github.com/taxfix/ui-framework)
+
+- Based on [Material-UI](https://material-ui.com/)
+- Theme for internal products, theme for external products in development
+- A few custom components
+- Currently used in [Taxmin](https://integration-taxmin.taxfix.de)
+- Check out our [docs](https://ui.taxfix.de)!
+
+---
+
+## Caveats
+
+- Developing a feature that requires a new component is more complex
+- Developing a new component is more complex since it needs to be generic
+
+---
+
+## Thank you for listening!
+
+- Any questions? 💬
+- If you're interested in UI components and reusability, join the Design System community, we need your help!
+- Our slack channel: [#community-design-system](https://taxfix.slack.com/archives/CSRH816DU)
+
+---
+
+## Extra slides 🙈
+
+---
+
+## Why use an existing framework?
+
+- We don't need to reimplement most simple components, we get tested and tried primitives for free
+- We don't need to think about component classification, theme structure, component names, ...
+- We get generic components with great APIs and customization options for edge cases
